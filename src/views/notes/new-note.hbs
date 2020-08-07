@@ -1,0 +1,24 @@
+<!-- Formulario para crear nueva nota -->
+
+<div class="col-md-4 mx-auto">         <!-- Este div se encarga de centrar la card. -->
+    <div class="card">
+    <div class="card-header">
+        <h3>new note</h3>
+    </div>
+    <div class="card-body">
+        <form action="/notes/new-note" method="POST">                                                  <!-- Aqui decimos a dónde se ha de enviar el formulario, a qué ruta. Y mediante el método post. -->
+            <div class="form-group">
+                <input type="text" name="title" class="form-control" placeholder = "Title" autofocus>  <!-- Aqui, lo que pongamos como name es el 'titulo' que el servidor va a recivir con lo que introduzca el usuario, por ejemplo si introduce kjhg recive 'title': 'kjhg'. El placeholder pone una palabra en el input, el autofocus pone en el input el ratón parpadeando.-->
+            </div>
+            <div class="form-group">
+                <textarea name="description" class="form-control" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">                               <!-- Este es el botón, el tipo submit es para que envie. -->
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

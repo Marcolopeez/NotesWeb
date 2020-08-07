@@ -1,0 +1,25 @@
+VIEWS:
+
+    Almacena todos los archivos que mandamos al navegador, todas las vistas, es decir, los html. 
+    Aunque en este proyecto vamos a estar usando el motor de plantilla handle-bars, todo ello va a ser convertido despues a html, que es lo que se envía al navegador.
+
+ROUTES:
+
+    Nos sirve para crear las url o rutas, de nuestro navegador.
+
+PUBLIC:
+
+    Sirve para insertar los archivos estáticos: imágenes, fuentes, archivos css... o cualquier otro archivo que queramos enviar al navegador y que lo pueda pintar por pantalla.
+
+MODELS:
+
+    Nos sirve para definir como van a lucir los datos que queremos almacenar dentro de la base de datos. Por ejemplo el usuario tendra un nombre, una contraseña, una fecha de creación... Eso lo definimos aqui.
+
+HELPERS:
+
+    Enrealidad esta carpeta no es necesaria pero la vamos a usar para cuando queramos usar una función que no vayamos a usar en todo el código sino solo a veces. Entonces la creamos en helpers y la exportamos a donde queramos usarla.
+
+CONFIG:
+
+    Esta carpeta almacenará distintos archivos, como las variables de configuración del entorno, nuestra configuración de como estamos autentificando...
+

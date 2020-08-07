@@ -1,0 +1,40 @@
+<!-- Esto es una plantilla, la cual vamos a usar en todas las vistas. Es la misma navegacion para todas.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes App</title>
+
+    <!-- BOOTSTRAP 4   Para poder usar sus plantillas (ponemos el enlace abajo)-->    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    <!-- Dirección del archivo main de la carpeta css en public, de esta forma usamos los estilos definidos en ese archivo  -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+</head>
+<body>
+
+    {{> navigation}}
+    
+    <main class = "container p-5">
+        {{>errors}}                 <!-- Aqui llamamos al pedazo de código 'errors' de la carpeta partials. Dónde se recorre el array errors cada vez que se crea, edita una nota... Hacemos esto para que quede más modularizado. -->
+        {{{ body }}}                <!-- Esto es lo que cambia en cada vista. Cada vista tiene su propio 'body', esto es gracias a las tres llaves, propias del lenguaje .hbs. Todo lo de arriba y lo de abajo a esta linea es común en las distintas vistas. -->
+    </main>
+   
+   
+
+    <!-- SCRIPTS (Parte js de BOOSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

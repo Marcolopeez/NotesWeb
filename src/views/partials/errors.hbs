@@ -1,0 +1,10 @@
+<!-- Aqui falta una cosa de los errores de flash, los mensajes -->
+
+{{#each errors}}                                                                                      <!-- Como estamos reciviendo datos vamos a usar la sintaxis de handlebar. El 'each' es una especie de if en bucle for. Es decir, si existe el error, empieza a recorrer el array de errores y genera una alerta de Boostrap por cada error.-->
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{text}}                                                                                      <!-- En notes.js en el array de errors tenemos definido 'text' para cada error. -->
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{{/each}}

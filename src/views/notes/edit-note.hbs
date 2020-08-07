@@ -1,0 +1,25 @@
+<!-- Aqui creamos el formulario para editar -->
+
+<div class="col-md-4 mx-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>Edit Note</h3>
+            </div>
+        <div class="card-body">
+            <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="POST"> 
+                <input type="hidden" name="_method" value="PUT" > <!-- Esto es un input oculto utilizado para que el servidor sepa que vamos a enviar un método Put. -->
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Title" value="{{note.title}}">            <!-- Como queremo saber el titulo que habia ya antes en la nota hacemos "value = {{note.title}}"-->
+                </div>
+                <div class="form-group">
+                    <textarea name="description" class="form-control" placeholder="Description" value="{{note.title}}">{{note.description}}</textarea>  <!-- Aqui tambien queremos saber la descrupcion que ya habia pero como envez de un imput es un text area, para saberlo lo que hacemos es poner "{{note.description}}" dentro del textarea -->
+                </div>
+                <div class="form-group">
+                    <button class = "btn btn-primary btn-block" type="submmit">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
